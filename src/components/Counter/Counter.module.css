@@ -1,0 +1,16 @@
+.counter {
+    display: block;
+    text-align: center;
+    width: fit-content;
+    height: auto;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: rgb(101, 101, 235);
+    border-radius: 5px;
+}
+
+.value {
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+}

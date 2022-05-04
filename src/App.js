@@ -20,7 +20,7 @@ function App() {
       <Alert text="Ей" type="warning" />
       <Alert text="Ей" type="error" /> */}
       {/* <ColorPicker options={colorPickerOptions} /> */}
-      <Counter initialValue={10} />
+      <Counter initialValue={10git} />
       {/* <Toggle /> */}
     </div>
   );

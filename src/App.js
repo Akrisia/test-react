@@ -1,5 +1,7 @@
-import ColorPicker from "./components/ColorPicker";
-import Alert from "./components/Alert";
+// import ColorPicker from "./components/ColorPicker";
+// import Alert from "./components/Alert";
+import Counter from "./components/Counter";
+// import Toggle from "./components/Toggle";
 
 // const colorPickerOptions = [
 //   { label: "red", color: "#F44336" },
@@ -13,11 +15,13 @@ import Alert from "./components/Alert";
 function App() {
   return (
     <div className="App">
-      <Alert text="Ей" />
+      {/* <Alert text="Ей" />
       <Alert text="Ей" type="success" />
       <Alert text="Ей" type="warning" />
-      <Alert text="Ей" type="error" />
+      <Alert text="Ей" type="error" /> */}
       {/* <ColorPicker options={colorPickerOptions} /> */}
+      <Counter initialValue={10} />
+      {/* <Toggle /> */}
     </div>
   );
 }

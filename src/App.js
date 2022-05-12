@@ -1,29 +1,25 @@
-// import ColorPicker from "./components/ColorPicker";
-// import Alert from "./components/Alert";
-import Counter from "./components/Counter";
-// import Toggle from "./components/Toggle";
+import axios from "axios";
+import { Component } from "react";
+import { ToastContainer } from "react-toastify";
+import Form from "./components/Form";
+import PokemonInfo from "./components/PokemonInfo";
 
-// const colorPickerOptions = [
-//   { label: "red", color: "#F44336" },
-//   { label: "green", color: "#4CAF50" },
-//   { label: "blue", color: "#2196F3" },
-//   { label: "grey", color: "#607D8B" },
-//   { label: "pink", color: "#E91E63" },
-//   { label: "indigo", color: "#3F51B5" },
-// ];
+export default class App extends Component {
+  state = {
+    pokemonName: "",
+  };
 
-function App() {
-  return (
-    <div className="App">
-      {/* <Alert text="Ей" />
-      <Alert text="Ей" type="success" />
-      <Alert text="Ей" type="warning" />
-      <Alert text="Ей" type="error" /> */}
-      {/* <ColorPicker options={colorPickerOptions} /> */}
-      <Counter initialValue={10git} />
-      {/* <Toggle /> */}
-    </div>
-  );
+  handleFormSubmit = (pokemonName) => {
+    this.setState({ pokemonName });
+  };
+
+  render() {
+    return (
+      <div style={{ maxWidth: 1000, margin: "0 auto", padding: 20 }}>
+        <Form onSubmit={this.handleFormSubmit} />
+        <PokemonInfo pokemonName={this.state.pokemonName} />
+        <ToastContainer autoClose={3000} />
+      </div>
+    );
+  }
 }
-
-export default App;
